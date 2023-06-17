@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ITE Online Shop</string>
+    <string name="home">Home</string>
+    <string name="product">Product</string>
+    <string name="profile">Profile</string>
+    <string name="more">More</string>
+    <string name="products">Products</string>
+    <string name="search_products">Search products</string>
+    <string name="my_profile">My Profile</string>
 </resources>

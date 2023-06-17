@@ -1,8 +1,10 @@
-package kh.edu.rupp.ite.onlineshop;
+package kh.edu.rupp.ite.onlineshop.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import kh.edu.rupp.ite.onlineshop.R;
 
 public class MainActivity extends AppCompatActivity {
 
