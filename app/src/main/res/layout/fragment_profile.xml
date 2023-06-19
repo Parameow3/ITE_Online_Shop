@@ -166,6 +166,7 @@
 
 
         <EditText
+            android:id="@+id/txtEditAddress"
             android:layout_marginTop="8dp"
             android:padding="16dp"
             android:layout_width="match_parent"
