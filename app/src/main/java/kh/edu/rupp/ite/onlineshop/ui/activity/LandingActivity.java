@@ -31,11 +31,11 @@ public class LandingActivity extends AppCompatActivity {
         // setup listeners
         binding.bottomNav.setOnItemSelectedListener(item -> {
 
-            if(item.getItemId() == R.id.menuHome){
+            if (item.getItemId() == R.id.menuHome) {
                 showFragment(new HomeFragment());
-            } else if (item.getItemId() == R.id.menuProduct){
+            } else if (item.getItemId() == R.id.menuProduct) {
                 showFragment(new ProductFragment());
-            } else if (item.getItemId() == R.id.menuProfile){
+            } else if (item.getItemId() == R.id.menuProfile) {
                 showFragment(new ProfileFragment());
             } else {
                 showFragment(new MoreFragment());
@@ -46,7 +46,7 @@ public class LandingActivity extends AppCompatActivity {
     }
 
 
-    private void showFragment(Fragment fragment){
+    private void showFragment(Fragment fragment) {
         // FragmentManager
         FragmentManager fragmentManager = getSupportFragmentManager();
 
