@@ -25,7 +25,8 @@
         android:inputType="text"
         android:paddingHorizontal="16dp"
         android:textColor="@color/black"
-        android:textColorHint="#837E7E" />
+        android:textColorHint="#837E7E"
+        android:layout_marginBottom="8dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleViewProduct"

@@ -8,4 +8,12 @@
     <string name="search_products">Search products</string>
     <string name="my_profile">My Profile</string>
     <string name="email">Email</string>
+    <string name="hot_product">Hot Product</string>
+    <string name="best_price">Best Price</string>
+    <string name="hot">HOT</string>
+    <string name="_9_9">$9.99</string>
+    <string name="_12_99">$12.99</string>
+    <string name="sale">SALE</string>
+    <string name="_6_99">$6.99</string>
+    <string name="_7_99">$7.99</string>
 </resources>
