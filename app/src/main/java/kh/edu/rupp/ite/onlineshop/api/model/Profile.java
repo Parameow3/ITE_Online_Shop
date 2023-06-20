@@ -2,6 +2,8 @@ package kh.edu.rupp.ite.onlineshop.api.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Date;
+
 public class Profile {
 
     private String first_name;
@@ -14,8 +16,16 @@ public class Profile {
 
     @SerializedName("image-url")
     private String imgUrl;
-    private String birthday;
+    private Date birthday;
     private String address;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
     public String getFirst_name() {
         return first_name;
@@ -65,13 +75,6 @@ public class Profile {
         this.imgUrl = imgUrl;
     }
 
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
 
     public String getAddress() {
         return address;

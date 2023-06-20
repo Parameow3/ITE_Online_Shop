@@ -4,8 +4,8 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="188dp"
     android:layout_height="256dp"
-    android:orientation="vertical"
-    android:layout_marginTop="16dp">
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

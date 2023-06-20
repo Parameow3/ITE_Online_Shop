@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import kh.edu.rupp.ite.onlineshop.api.model.Product;
 import kh.edu.rupp.ite.onlineshop.databinding.ViewHolderProductBinding;
@@ -19,7 +20,7 @@ import kh.edu.rupp.ite.onlineshop.databinding.ViewHolderProfileVboxBinding;
 
 public class ProductAdapterVBox extends ListAdapter<Product, ProductAdapterVBox.ProductViewHolder> {
 
-    public ProductAdapterVBox(){
+    public ProductAdapterVBox() {
         super(new DiffUtil.ItemCallback<Product>() {
             @Override
             public boolean areItemsTheSame(@NonNull Product oldItem, @NonNull Product newItem) {
@@ -71,7 +72,8 @@ public class ProductAdapterVBox extends ListAdapter<Product, ProductAdapterVBox.
             itemBinding.nameProduct.setText(product.getName());
 
             // bind product price to recycle view
-            itemBinding.priceProduct.setText("$" + product.getPrice() + ".00");
+            DecimalFormat df = new DecimalFormat("$#.00");
+            itemBinding.priceProduct.setText(df.format(product.getPrice()));
         }
 
     }

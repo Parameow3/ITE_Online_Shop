@@ -14,7 +14,12 @@ import androidx.fragment.app.Fragment;
 
 import com.squareup.picasso.Picasso;
 
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Objects;
 
 import kh.edu.rupp.ite.onlineshop.api.model.Profile;
 import kh.edu.rupp.ite.onlineshop.api.service.ApiService;
@@ -45,7 +50,7 @@ public class ProfileFragment extends Fragment {
         loadProfileFromServer();
     }
 
-    private void loadProfileFromServer(){
+    private void loadProfileFromServer() {
 
         // create retrofit client
         Retrofit httpClient = new Retrofit.Builder()
@@ -62,11 +67,15 @@ public class ProfileFragment extends Fragment {
         task.enqueue(new Callback<Profile>() {
             @Override
             public void onResponse(Call<Profile> call, Response<Profile> response) {
-                if (response.isSuccessful()){
+                if (response.isSuccessful()) {
                     Toast.makeText(getContext(), "Load Profile Successful!", Toast.LENGTH_LONG).show();
-                    showProfile(response.body());
+                    try {
+                        showProfile(response.body());
+                    } catch (ParseException e) {
+                        throw new RuntimeException(e);
+                    }
 
-                }else {
+                } else {
                     Toast.makeText(getContext(), "Load Profile failed!", Toast.LENGTH_LONG).show();
                 }
             }
@@ -80,12 +89,12 @@ public class ProfileFragment extends Fragment {
     }
 
     @SuppressLint("SetTextI18n")
-    private void showProfile(Profile profile){
+    private void showProfile(Profile profile) throws ParseException {
         // set image to view
         Picasso.get().load(profile.getImgUrl()).into(binding.imgProfile);
 
         // set full name to Imageview
-        binding.txtFullName.setText(profile.getFirst_name() +" "+ profile.getLast_name());
+        binding.txtFullName.setText(profile.getFirst_name() + " " + profile.getLast_name());
 
         // set email to Textview
         binding.txtEmail.setText(profile.getEmail());
@@ -101,7 +110,8 @@ public class ProfileFragment extends Fragment {
         binding.txtEditGender.setText(profile.getGender());
 
         // set birthday to edittext
-        binding.txtEditBoD.setText(profile.getBirthday());
+        @SuppressLint("SimpleDateFormat") DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        binding.txtEditBoD.setText(formatter.format(Objects.requireNonNull(profile.getBirthday())));
 
         // set address to edittext
         binding.txtEditAddress.setText(profile.getAddress());

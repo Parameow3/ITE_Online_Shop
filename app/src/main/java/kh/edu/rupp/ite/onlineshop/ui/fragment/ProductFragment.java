@@ -46,7 +46,7 @@ public class ProductFragment extends Fragment {
         loadProductListFromServer();
     }
 
-    private void loadProductListFromServer(){
+    private void loadProductListFromServer() {
 
         // create retrofit client
         Retrofit httpClient = new Retrofit.Builder()
@@ -63,11 +63,11 @@ public class ProductFragment extends Fragment {
         task.enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-                if (response.isSuccessful()){
+                if (response.isSuccessful()) {
                     Toast.makeText(getContext(), "Load Products list Successful!", Toast.LENGTH_LONG).show();
                     showProductList(response.body());
 
-                }else {
+                } else {
                     Toast.makeText(getContext(), "Load Products list failed!", Toast.LENGTH_LONG).show();
                 }
             }
@@ -80,7 +80,7 @@ public class ProductFragment extends Fragment {
         });
     }
 
-    private void showProductList(List<Product> productList){
+    private void showProductList(List<Product> productList) {
 
         // Create Layout Manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
