@@ -4,6 +4,7 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -18,22 +19,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp" >
+        android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
             android:layout_width="96dp"
             android:layout_height="96dp"
-            app:cardCornerRadius="96dp"
-            >
+            app:cardCornerRadius="96dp">
 
             <ImageView
                 android:id="@+id/imgProfile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_profile_sample_foreground"
-                />
+                android:src="@drawable/ic_profile_sample_foreground" />
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
@@ -52,14 +51,15 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="Full Name" />
+                tool:text="Full Name" />
 
             <TextView
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/silver_primary"
                 android:textSize="16sp"
-                android:text="Email" />
+                tool:text="Email" />
 
         </LinearLayout>
 
@@ -73,108 +73,118 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/email"/>
+            android:text="@string/email"
+            android:textColor="@color/silver_primary" />
 
         <EditText
             android:id="@+id/txtEditEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="email@abc.com"
-            android:textStyle="bold"
+            android:backgroundTint="@color/silver"
             android:editable="false"
-            />
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tool:text="email@abc.com" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Phone Number"/>
+            android:text="@string/phone_number"
+            android:textColor="@color/silver_primary" />
 
         <EditText
             android:id="@+id/txtEditPhoneNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="000 000 000"
+            android:backgroundTint="@color/silver"
+            android:editable="false"
+            android:textColor="@color/black"
             android:textStyle="bold"
-            android:editable="false" />
+            tool:text="000 000 000" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gender"/>
+            android:text="@string/gender"
+            android:textColor="@color/silver_primary" />
 
         <EditText
             android:id="@+id/txtEditGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Male"
-            android:textStyle="bold"
+            android:backgroundTint="@color/silver"
             android:editable="false"
-            />
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tool:text="Male" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Birthday"/>
+            android:text="@string/birthday"
+            android:textColor="@color/silver_primary" />
 
         <EditText
             android:id="@+id/txtEditBoD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DD-MM-YYYY"
-            android:textStyle="bold"
+            android:backgroundTint="@color/silver"
             android:editable="false"
-            />
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tool:text="DD-MM-YYYY" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Address"/>
+            android:text="@string/address"
+            android:textColor="@color/silver_primary" />
 
 
         <EditText
             android:id="@+id/txtEditAddress"
-            android:layout_marginTop="8dp"
-            android:padding="16dp"
             android:layout_width="match_parent"
-            android:gravity="top"
             android:layout_height="128dp"
-            android:text="Address"
+            android:layout_marginTop="8dp"
             android:background="@drawable/rounded_textbox"
             android:editable="false"
-            />
+            android:gravity="top"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            tool:text="Address" />
     </LinearLayout>
 </LinearLayout>

@@ -16,4 +16,16 @@
     <string name="sale">SALE</string>
     <string name="_6_99">$6.99</string>
     <string name="_7_99">$7.99</string>
+    <string name="bunchhay">Bunchhay</string>
+    <string name="my_address">My Address</string>
+    <string name="bank_account">Bank Account</string>
+    <string name="my_coupon">My Coupon</string>
+    <string name="language">Language</string>
+    <string name="about_us">About Us</string>
+    <string name="user_agreement">User Agreement</string>
+    <string name="help_center">Help Center</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="birthday">Birthday</string>
+    <string name="address">Address</string>
 </resources>

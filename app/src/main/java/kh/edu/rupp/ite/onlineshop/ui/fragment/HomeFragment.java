@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import kh.edu.rupp.ite.onlineshop.api.model.Product;
 import kh.edu.rupp.ite.onlineshop.api.service.ApiService;
 import kh.edu.rupp.ite.onlineshop.databinding.FragmentHomeBinding;
 import kh.edu.rupp.ite.onlineshop.ui.adapter.ProductAdapter;
+import kh.edu.rupp.ite.onlineshop.ui.adapter.ProductAdapterVBox;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -80,11 +82,11 @@ public class HomeFragment extends Fragment {
     private void showProductList(List<Product> productList){
 
         // Create Layout Manager
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
         binding.recycleViewHome.setLayoutManager(layoutManager);
 
         // Create Adapter
-        ProductAdapter adapter = new ProductAdapter();
+        ProductAdapterVBox adapter = new ProductAdapterVBox();
         adapter.submitList(productList);
         binding.recycleViewHome.setAdapter(adapter);
 
