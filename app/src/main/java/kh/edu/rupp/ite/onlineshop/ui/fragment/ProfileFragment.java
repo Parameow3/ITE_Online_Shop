@@ -54,7 +54,7 @@ public class ProfileFragment extends Fragment {
 
         // create retrofit client
         Retrofit httpClient = new Retrofit.Builder()
-                .baseUrl("https://ferupp.s3.ap-southeast-1.amazonaws.com/Midterm/Profile/")
+                .baseUrl("https://raw.githubusercontent.com/kimsongsao/ferupp/main/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
