@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
 
         // create retrofit client
         Retrofit httpClient = new Retrofit.Builder()
-                .baseUrl("https://raw.githubusercontent.com/kimsongsao/ferupp/main/")
+                .baseUrl("https://raw.githubusercontent.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -9,9 +9,9 @@ import retrofit2.http.GET;
 
 public interface ApiService {
 
-    @GET("products.json")
+    @GET("kimsongsao/ferupp/main/products.json")
     Call<List<Product>> loadProductList();
 
-    @GET("profile.json")
+    @GET("kimsongsao/ferupp/main/profile.json")
     Call<Profile> loadProfile();
 }
